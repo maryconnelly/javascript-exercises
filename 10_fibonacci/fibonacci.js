@@ -1,21 +1,24 @@
-//const fibonacci = function(member) {
-
+const fibonacci = function(memberNumber) {
 
 let fibArray = [1, 1, 2, 3, 5, 8];
 
 for (i = 0; i <= 25; i++) {
-    let newMember = fibArray.at(-2) + fibArray.at(-1);
+    const newMember = fibArray.at(-2) + fibArray.at(-1);
     fibArray.push(newMember);
 };
 
-//find nth member of fib array
-//let index = fibArray.at(member - 1);
-//return member;
+const number = Number(memberNumber);
 
-//};
+if (number < 0) return "OOPS";
+if (number === 0) return 0;
 
-console.log(fibArray);
+const member = fibArray.at((number - 1))
+return member;
+
+};
+
+fibonacci();
 
  
-// Do not edit below this line
-//module.exports = fibonacci;
+//Do not edit below this line
+module.exports = fibonacci;
